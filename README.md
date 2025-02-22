@@ -1,1 +1,1 @@
-# portugol- media do 1ads brazil
+# portugol- do 1ads brazil
