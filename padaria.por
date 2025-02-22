@@ -1,27 +1,42 @@
 programa
 {
-    real precoBolo = 10.0
-    real precoSalgado = 5.0
-    real precoRefrigerante = 3.0
-    real precopao = 2.0
-    inteiro quantidadeBolo, quantidadeSalgado, quantidadeRefrigerante, quantidadepao
-    real total, valorPago, troco
-
+  
+    real total, valorPago, troco, quantidadeBolo, quantidadeSalgado, quantidadeRefrigerante, quantidadepao, valorbolo, valorsalgado, valorrefrigerante, valorpao, valordevido
+    cadeia nome, cod
     funcao inicio()
     {
-        escreva("Quantos Bolos você quer comprar? ")
+      escreva ("qual e o nome do clinte?\n")
+      leia (nome)
+      escreva ("qual e o codigo do clinte?\n")
+      leia  (cod)
+    limpa()
+     escreva ("qual e o valor do bolo?\n")
+      leia (valorbolo)
+
+      escreva ("qual e o valor do salgado?\n")
+      leia (valorsalgado)
+
+      escreva ("qual o valor do refrigerante?\n")
+      leia (valorrefrigerante)
+
+      escreva ("qual e o valor do pao?\n")
+      leia (valorpao)
+    limpa ()
+      escreva ("tabela de preços\n","pao.........................R$",valorpao,"\nbolo........................R$",valorbolo,"\nrefrigerante................R$",valorrefrigerante,"\nsalgado.....................R$",valorsalgado,"\n")
+
+        escreva("Quanto(s) Bolo você quer comprar? ")
         leia(quantidadeBolo)
         
-        escreva("Quantos Salgados você quer comprar? ")
+        escreva("Quanto(s) salgado você quer comprar? ")
         leia(quantidadeSalgado)
         
-        escreva("Quantos Refrigerantes você quer comprar? ")
+        escreva("Quanto(s) Refrigerante você quer comprar? ")
         leia(quantidadeRefrigerante)
 
-        escreva("Quantos paes você quer comprar? ")
+        escreva("Quanto(s) pae você quer comprar? ")
         leia(quantidadepao)
         
-        total = (quantidadeBolo * precoBolo) + (quantidadeSalgado * precoSalgado) + (quantidadeRefrigerante * precoRefrigerante) + (quantidadepao * precopao)
+        total = (quantidadeBolo * valorbolo) + (quantidadeSalgado * valorsalgado) + (quantidadeRefrigerante * valorrefrigerante) + (quantidadepao * valorpao)
         
         escreva("\nO valor total a ser cobrado é: R$ ", total)
         
@@ -32,24 +47,24 @@ programa
          
         se (valorPago >= total)
         {
-           
-            escreva("\nO troco é: R$ ",troco)
+           limpa ()
+           escreva ("nome do clinte: ",nome,"\n")
+           escreva ("codigo do clinte: ",cod,"\n")
+           escreva ("valor total da conpra: R$",total,"\n")
+           escreva ("valor pago:R$",valorPago,"\n")
+            escreva("O troco é: R$ ",troco)
+            escreva ("\ncompra finalizada")
         }
         senao
         {
+          limpa ()
+           valordevido = total - valorPago
+           escreva ("nome do clinte: ",nome,"\n")
+           escreva ("codigo do clinte: ",cod,"\n")
+           escreva ("valor total da conpra: R$",total,"\n")
+           escreva ("valor pago: R$",valorPago,"\n")
+           escreva ("valor que deve: R$",valordevido)
             escreva("\nO valor pago é insuficiente.")
         }
     }
 }
-
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 1115; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
